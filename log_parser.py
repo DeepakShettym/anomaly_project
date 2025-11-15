@@ -12,3 +12,12 @@ for line in lines[:5]:
     message = ' '.join(parts[4:])
     print(f'Time: {timestamp}\nMessage: {message}\n')
 
+
+for line in lines[:20]:
+    if "error" in line.lower():
+        print("[ERROR]", line.strip())
+    elif "warning" in line.lower():
+        print("[WARNING]", line.strip())
+    else:
+        print("[INFO]", line.strip())
+
